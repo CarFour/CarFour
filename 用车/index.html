@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <title>车辆状态</title>
+   <link rel="stylesheet" href="css/weui.css">
+     <link rel="stylesheet" href="css/weui.min.css">
+ <link rel="stylesheet" href="css/jquery-weui.min.css">
+  <link rel="stylesheet" href="css/jquery-weui.css">
+   <link rel="stylesheet" href="css/index.css">
+</head>
+<body>   
+       <div id="header">
+          <div class="weui-row">
+      <div class="weui-col-33 return" ><a href=""><img src="images/return.png" /></a></div>
+      <div class="weui-col-33 title">车辆状态</div>
+      <div class="weui-col-33 lianjie"><a href="" /><img src="images/sandain.png" /></a></div>
+    </div>
+    </div>
+          <div class="weui-search-bar" id="searchBar">
+      <form class="weui-search-bar__form">
+        <div class="weui-search-bar__box">
+          <i class="weui-icon-search"></i>
+          <input type="search" class="weui-search-bar__input"  placeholder="搜索" required="">
+          <a href="javascript:" class="weui-icon-clear" ></a>
+        </div>
+        <label class="weui-search-bar__label"  style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);">
+          <i class="weui-icon-search"></i>
+          <span>搜索</span>
+        </label>
+      </form>
+      <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+    </div>
+          <div class="weui-cells weui-cells_radio">
+        <label class="weui-cell weui-check__label" for="x11">
+          <div class="weui-cell__bd">
+            <p>宝马1</p>
+            <h4>未来1小时</h4>
+          </div>
+          <div class="weui-cell__ft" id="xianzhuang">空闲</div>
+          <div class="weui-cell__ft">
+            <input type="radio" class="weui-check" name="radio1" id="x11">
+            <span class="weui-icon-checked"></span>
+          </div>
+        </label>
+        <label class="weui-cell weui-check__label" for="x12">
+
+          <div class="weui-cell__bd">
+            <p>奥迪1</p>
+             <h4>2017.4.27至2017.5.4</h4>
+          </div>
+              <div class="weui-cell__ft" id="xianzhuang">占用</div>
+          <div class="weui-cell__ft">
+            <input type="radio" name="radio1" class="weui-check" id="x12" checked="checked">
+            <span class="weui-icon-checked"></span>
+          </div>
+        </label>
+          <label class="weui-cell weui-check__label" for="x13">
+          <div class="weui-cell__bd">
+            <p>商务1号（的士）</p>
+            <h4>未来三小时</h4>
+          </div>
+          <div class="weui-cell__ft" id="xianzhuang">空闲</div>
+          <div class="weui-cell__ft">
+            <input type="radio" class="weui-check" name="radio1" id="x13">
+            <span class="weui-icon-checked"></span>
+          </div>
+        </label>
+          <label class="weui-cell weui-check__label" for="x14">
+          <div class="weui-cell__bd">
+            <p>奔驰</p>
+              <h4>未来三小时</h4>
+          </div>
+          <div class="weui-cell__ft" id="xianzhuang">空闲</div>
+          <div class="weui-cell__ft">
+            <input type="radio" class="weui-check" name="radio1" id="x14">
+            <span class="weui-icon-checked"></span>
+          </div>
+        </label>
+      </div>
+        <div class="button_sp_area">
+     <a href="javascript:;" class="weui-btn">新建用户申请</a>
+    </div>
+</body>
+   <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery-weui.js"></script>
+        <script type="text/javascript" src="js/jquery-weui.min.js"></script>
+     <script type="text/javascript" src="js/fastclick.js"></script>  
+        <script type="text/javascript" src="js/swiper.js"></script>
+        <script type="text/javascript" src="js/swiper.min.js"></script>
+        <script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+</script>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <title>新建用户申请</title>
+   <link rel="stylesheet" href="css/weui.css">
+     <link rel="stylesheet" href="css/weui.min.css">
+ <link rel="stylesheet" href="css/jquery-weui.min.css">
+  <link rel="stylesheet" href="css/jquery-weui.css">
+   <link rel="stylesheet" href="css/reply.css">
+</head>
+<body>   
+       <div id="header">
+          <div class="weui-row">
+      <div class="weui-col-33 return" ><a href=""><img src="images/return.png" /></a></div>
+      <div class="weui-col-33 title">新建申请</div>
+      <div class="weui-col-33 lianjie"><a href="" /><img src="images/sandain.png" /></a></div>
+    </div>
+    </div>
+   <div class="weui-cells">
+          <div class="weui-cell">
+            <div class="weui-cell__bd">
+              <p>申请标题  <span>某某出差用宝马车申请</span></p>
+            </div>
+            <div class="weui-cell__ft">17:30</div>
+          </div>
+        </div>
+       <div class="weui-cell">
+        <div class="weui-cell__hd"><label for="date" class="weui-label">借用时间</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="date" type="text">
+        </div>
+      </div>
+         <div class="weui-cell">
+        <div class="weui-cell__hd"><label for="date2" class="weui-label">归还时间</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="date2" type="text">
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label for="date" class="weui-label">申请部门</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="personal" type="text" value="">
+        </div>
+      </div>
+      <div class="weui-cells__title ">用车事由</div>
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请在此处填写用车事由，用车意向" rows="3"></textarea>
+          <div class="weui-textarea-counter"><span>0</span>/200</div>
+        </div>
+      </div>
+      <div class="weui-cells__title" id="titile"> 选择审批流程</div>
+           <div class="weui-cell weui-cell_access">
+        <div class="weui-cell__bd">
+        <img src="images/quan.png">
+          <span style="vertical-align: middle;font-size:.7rem;
+                color:#222;
+                font-weight:bold;margin-top:-8px;margin-left:2px">审批流程</span>
+        </div>
+        <div class="weui-cell__ft"></div>
+      </div>
+      <div class="weui-cells__title" id="titile">审批人</div>
+        <div class="weui-cells__title" id="titile">抄送人</div>
+             <div class="button_sp_area">
+     <a href="javascript:;" class="weui-btn">提&nbsp&nbsp 交</a>
+    </div>
+</body>
+   <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery-weui.js"></script>
+        <script type="text/javascript" src="js/jquery-weui.min.js"></script>
+     <script type="text/javascript" src="js/fastclick.js"></script>  
+        <script type="text/javascript" src="js/swiper.js"></script>
+        <script type="text/javascript" src="js/swiper.min.js"></script>
+        <script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+</script>
+  <script>
+      $("#date").calendar({
+        onChange: function (p, values, displayValues) {
+          console.log(values, displayValues);
+        }
+      });
+      $("#date2").calendar({
+        value: ['2016-12-12'],
+        dateFormat: 'yyyy-mm-dd'  // 自定义格式的时候，不能通过 input 的value属性赋值 '2016年12月12日' 来定义初始值，这样会导致无法解析初始值而报错。只能通过js中设置 value 的形式来赋值，并且需要按标准形式赋值（yyyy-mm-dd 或者时间戳)
+      });
+      $("#date-multiple").calendar({
+        multiple: true,
+        onChange: function (p, values, displayValues) {
+          console.log(values, displayValues);
+        }
+      });
+      $("#date3").calendar({
+        container: "#inline-calendar"
+      });
+    </script>
+    <script>
+      $("#personal").picker({
+        title: "请选择您的部门",
+        cols: [
+          {
+            textAlign: 'center',
+            values: ['董事长', '活动策划部', '财务部', '销售部', '人事部']
+          }
+        ],
+        onChange: function(p, v, dv) {
+          console.log(p, v, dv);
+        },
+        onClose: function(p, v, d) {
+          console.log("close");
+        }
+      });
+      </script>
+</html>
